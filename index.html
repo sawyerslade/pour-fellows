@@ -67,10 +67,12 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
 
 /* ABOUT split */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-top: 60px; }
-.split-visual { aspect-ratio: 4/5; background: linear-gradient(165deg, #2E2620, #1C1714); border: 1px solid rgba(201,162,75,0.25); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-.split-visual::after { content: ''; position: absolute; width: 280px; height: 280px; border: 1px solid rgba(224,150,74,0.28); border-radius: 50%; }
-.split-visual::before { content: ''; position: absolute; width: 180px; height: 180px; border: 1px solid rgba(224,150,74,0.20); border-radius: 50%; }
-.split-visual span { font-family: Georgia, serif; font-size: 30px; color: rgba(247,241,231,0.5); position: relative; z-index: 2; font-style: italic; }
+.split-visual { aspect-ratio: 4/5; background: linear-gradient(165deg, #2E2620, #1C1714); border: 1px solid rgba(201,162,75,0.25); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 40px; }
+.split-visual::after { content: ''; position: absolute; inset: 18px; border: 1px dashed rgba(224,150,74,0.35); border-radius: 4px; }
+.split-visual .ph-icon { width: 56px; height: 56px; margin-bottom: 20px; position: relative; z-index: 2; }
+.split-visual .ph-icon svg { width: 100%; height: 100%; stroke: rgba(224,150,74,0.6); }
+.split-visual .ph-title { font-family: Georgia, serif; font-size: 24px; color: rgba(247,241,231,0.7); position: relative; z-index: 2; font-style: italic; margin-bottom: 8px; text-align: center; }
+.split-visual .ph-sub { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(247,241,231,0.4); position: relative; z-index: 2; text-align: center; }
 .split-text p { font-size: 18px; line-height: 1.9; color: var(--muted); margin-bottom: 26px; }
 .split-text .serif-quote { font-family: Georgia, serif; font-size: 24px; font-style: italic; color: var(--char); line-height: 1.6; margin-bottom: 28px; }
 
@@ -174,7 +176,11 @@ footer { background: var(--char); border-top: 1px solid rgba(201,162,75,0.18); p
     <p class="lead">We're a downtown Grand Junction spot where the food actually matters. Come for the game, stay because the kitchen surprised you.</p>
   </div>
   <div class="split">
-    <div class="split-visual reveal"><span>Pour Fellows</span></div>
+    <div class="split-visual reveal">
+      <div class="ph-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+      <div class="ph-title">Your photos here</div>
+      <div class="ph-sub">The bar · the food · the people</div>
+    </div>
     <div class="split-text reveal">
       <div class="serif-quote">"Best cheesesteak I've had in Grand Junction so far — definitely one of our favorite restaurants."</div>
       <p>From the jalapeño margarita to the shrimp and grits, we put real care into every plate and pour. Great happy hour, friendly faces behind the bar, and a room that's easy to settle into for the afternoon or the whole night.</p>
